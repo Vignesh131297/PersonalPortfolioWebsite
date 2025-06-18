@@ -62,7 +62,7 @@
   }
 
   body {
-    @apply font-inter antialiased;
+    @apply antialiased;
     background: linear-gradient(135deg, var(--portfolio-primary) 0%, var(--portfolio-secondary) 100%);
     color: var(--portfolio-text);
     font-family: 'Inter', sans-serif;

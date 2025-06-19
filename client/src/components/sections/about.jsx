@@ -27,7 +27,10 @@ export default function AboutSection() {
             >
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-portfolio-accent to-portfolio-highlight rounded-full p-1">
                 <div className="w-full h-full bg-portfolio-secondary rounded-full flex items-center justify-center">
-                  <i className="fas fa-user text-6xl text-portfolio-accent"></i>
+                  <img
+                    src="/attached_assets/WhatsApp Image 2025-06-18 at 10.49.11 AM.jpeg"
+                    className="object-cover w-full h-full rounded-full"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -40,11 +43,11 @@ export default function AboutSection() {
               <h3 className="text-3xl font-bold mb-6 text-portfolio-text">
                 Transforming Ideas into Interactive Experiences
               </h3>
-              <p className="text-lg text-portfolio-neutral mb-6 leading-relaxed">
+              <p className="text-lg mb-6 leading-relaxed text-white drop-shadow-md">
                 Detail-oriented professional with a unique journey from Manual Testing to Front-End Development. 
                 My background in quality assurance gives me a keen eye for detail and user experience optimization.
               </p>
-              <p className="text-lg text-portfolio-neutral mb-8 leading-relaxed">
+              <p className="text-lg mb-8 leading-relaxed text-white drop-shadow-md">
                 Passionate about creating visually appealing and user-friendly interfaces using modern web technologies. 
                 Skilled in Adobe Creative Suite and Figma, I bridge the gap between design and development.
               </p>

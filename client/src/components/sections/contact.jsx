@@ -137,14 +137,6 @@ export default function ContactSection() {
                 >
                   <i className="fab fa-github text-white text-xl"></i>
                 </motion.a>
-                <motion.a 
-                  href={`mailto:${PERSONAL_INFO.email}`}
-                  className="bg-portfolio-accent hover:bg-blue-600 p-3 rounded-full transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <i className="fas fa-envelope text-white text-xl"></i>
-                </motion.a>
               </motion.div>
             </motion.div>
 

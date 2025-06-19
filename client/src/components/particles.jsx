@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function ParticleBackground() {
+export default function () {
   const particles = Array.from({ length: 5 }, (_, i) => ({
     id: i,
     top: `${20 + (i * 20)}%`,

@@ -40,6 +40,7 @@ export default function Home() {
             and <i className="fas fa-coffee text-yellow-600 mx-1"></i>
           </p>
         </div>
+
       </motion.footer>
     </div>
   );

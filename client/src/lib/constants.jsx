@@ -4,17 +4,17 @@ export const PERSONAL_INFO = {
   location: "Chennai, Tamil Nadu",
   phone: "+91 8825662918",
   email: "vigneshvic13@gmail.com",
-  linkedin: "https://linkedin.com/in/vignesh-arumugam",
-  github: "https://github.com/vigneshvic13",
+  linkedin: "https://www.linkedin.com/in/vignesh-a-2586b8261/",
+  github: "https://github.com/Vignesh131297",
 };
 
 export const SKILLS = [
-  { name: "React JS", level: 90, icon: "fab fa-react", color: "text-blue-400" },
-  { name: "JavaScript", level: 85, icon: "fab fa-js", color: "text-yellow-400" },
-  { name: "HTML5", level: 95, icon: "fab fa-html5", color: "text-orange-500" },
-  { name: "CSS3", level: 90, icon: "fab fa-css3-alt", color: "text-blue-400" },
-  { name: "Bootstrap", level: 80, icon: "fab fa-bootstrap", color: "text-purple-500" },
-  { name: "GitHub", level: 85, icon: "fab fa-github", color: "text-white" },
+  { name: "React JS", level: 75, icon: "fab fa-react", color: "text-blue-400" },
+  { name: "JavaScript", level: 75, icon: "fab fa-js", color: "text-yellow-400" },
+  { name: "HTML5", level: 90, icon: "fab fa-html5", color: "text-orange-500" },
+  { name: "CSS3", level: 80, icon: "fab fa-css3-alt", color: "text-blue-400" },
+  { name: "Bootstrap", level: 70, icon: "fab fa-bootstrap", color: "text-purple-500" },
+  { name: "GitHub", level: 70, icon: "fab fa-github", color: "text-white" },
 ];
 
 export const ADDITIONAL_SKILLS = [

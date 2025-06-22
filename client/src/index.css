@@ -1,352 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
-  --radius: 0.5rem;
-  
-  /* Custom Portfolio Colors - Unique Purple/Cyan Theme */
-  --portfolio-primary: hsl(270, 100%, 4%);
-  --portfolio-secondary: hsl(260, 50%, 10%);
-  --portfolio-accent: hsl(280, 100%, 70%);
-  --portfolio-highlight: hsl(190, 100%, 50%);
-  --portfolio-text: hsl(280, 30%, 95%);
-  --portfolio-neutral: hsl(270, 20%, 70%);
-  --portfolio-glow: hsl(280, 100%, 70%);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply antialiased;
-    background: radial-gradient(circle at 20% 50%, var(--portfolio-accent) 0%, transparent 50%), 
-                radial-gradient(circle at 80% 20%, var(--portfolio-highlight) 0%, transparent 50%), 
-                radial-gradient(circle at 40% 80%, var(--portfolio-accent) 0%, transparent 50%), 
-                linear-gradient(135deg, var(--portfolio-primary) 0%, var(--portfolio-secondary) 100%);
-    color: var(--portfolio-text);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-@layer components {
-  .gradient-bg {
-    background: radial-gradient(circle at 20% 50%, var(--portfolio-accent) 0%, transparent 50%), 
-                radial-gradient(circle at 80% 20%, var(--portfolio-highlight) 0%, transparent 50%), 
-                radial-gradient(circle at 40% 80%, var(--portfolio-accent) 0%, transparent 50%), 
-                linear-gradient(135deg, var(--portfolio-primary) 0%, var(--portfolio-secondary) 100%);
-  }
-
-  .glass-effect {
-    background: rgba(16, 8, 32, 0.7);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(147, 51, 234, 0.3);
-    box-shadow: 0 8px 32px rgba(147, 51, 234, 0.1);
-  }
-
-  .neon-glow {
-    box-shadow: 0 0 20px var(--portfolio-accent), 
-                0 0 40px var(--portfolio-accent), 
-                0 0 60px var(--portfolio-accent);
-  }
-
-  .text-glow {
-    text-shadow: 0 0 10px var(--portfolio-accent), 
-                 0 0 20px var(--portfolio-accent), 
-                 0 0 30px var(--portfolio-accent);
-  }
-
-  .floating-card {
-    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-    transition: all 0.3s ease;
-  }
-
-  .floating-card:hover {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-10px);
-  }
-
-  .hexagon {
-    width: 100px;
-    height: 57.735px;
-    background: var(--portfolio-accent);
-    position: relative;
-    margin: 28.8675px 0;
-  }
-
-  .hexagon:before,
-  .hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-  }
-
-  .hexagon:before {
-    bottom: 100%;
-    border-bottom: 28.8675px solid var(--portfolio-accent);
-  }
-
-  .hexagon:after {
-    top: 100%;
-    border-top: 28.8675px solid var(--portfolio-accent);
-  }
-
-  .skill-orb {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: conic-gradient(var(--portfolio-accent) 0deg, var(--portfolio-highlight) 180deg, var(--portfolio-accent) 360deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    animation: rotate 10s linear infinite;
-  }
-
-  .skill-orb::before {
-    content: '';
-    position: absolute;
-    inset: 3px;
-    border-radius: 50%;
-    background: var(--portfolio-primary);
-  }
-
-  .morphing-blob {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morph 8s ease-in-out infinite;
-  }
-
-  .timeline-connector {
-    position: relative;
-  }
-
-  .timeline-connector::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--portfolio-accent), var(--portfolio-highlight));
-    transform: translateX(-50%);
-  }
-
-  .project-card {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform-style: preserve-3d;
-  }
-
-  .project-card:hover {
-    transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
-    box-shadow: 0 25px 50px rgba(147, 51, 234, 0.3),
-                0 0 40px rgba(6, 182, 212, 0.2);
-  }
-
-  .nav-item {
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    position: relative;
-  }
-
-  .nav-item::before {
-    content: '';
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    background: conic-gradient(var(--portfolio-accent), var(--portfolio-highlight), var(--portfolio-accent));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-  }
-
-  .nav-item:hover::before {
-    opacity: 1;
-  }
-
-  .nav-item:hover {
-    transform: scale(1.2) rotateZ(10deg);
-  }
-
-  .cyber-border {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cyber-border::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--portfolio-accent), transparent);
-    animation: scan 2s linear infinite;
-  }
-
-  .hologram-text {
-    background: linear-gradient(45deg, var(--portfolio-accent), var(--portfolio-highlight), var(--portfolio-accent));
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-@layer utilities {
-  .text-portfolio-primary { color: var(--portfolio-primary); }
-  .text-portfolio-secondary { color: var(--portfolio-secondary); }
-  .text-portfolio-accent { color: var(--portfolio-accent); }
-  .text-portfolio-highlight { color: var(--portfolio-highlight); }
-  .text-portfolio-text { color: var(--portfolio-text); }
-  .text-portfolio-neutral { color: var(--portfolio-neutral); }
-  
-  .bg-portfolio-primary { background-color: var(--portfolio-primary); }
-  .bg-portfolio-secondary { background-color: var(--portfolio-secondary); }
-  .bg-portfolio-accent { background-color: var(--portfolio-accent); }
-  .bg-portfolio-highlight { background-color: var(--portfolio-highlight); }
-  .bg-portfolio-text { background-color: var(--portfolio-text); }
-  .bg-portfolio-neutral { background-color: var(--portfolio-neutral); }
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-30px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInRight {
-  0% { opacity: 0; transform: translateX(30px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--portfolio-accent); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes morph {
-  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
-  75% { border-radius: 60% 40% 60% 30% / 40% 30% 60% 50%; }
-}
-
-@keyframes scan {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { 
-    box-shadow: 0 0 20px var(--portfolio-accent), 
-                0 0 40px var(--portfolio-accent); 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-  50% { 
-    box-shadow: 0 0 40px var(--portfolio-accent), 
-                0 0 80px var(--portfolio-accent), 
-                0 0 120px var(--portfolio-accent); 
+  a:hover {
+    color: #747bff;
   }
-}
-
-@keyframes float-3d {
-  0%, 100% { 
-    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateY(0px); 
+  button {
+    background-color: #f9f9f9;
   }
-  50% { 
-    transform: perspective(1000px) rotateX(-5deg) rotateY(-5deg) translateY(-10px); 
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.animate-fade-in-left {
-  animation: fadeInLeft 0.8s ease-out;
-}
-
-.animate-fade-in-right {
-  animation: fadeInRight 0.8s ease-out;
-}
-
-.animate-bounce-slow {
-  animation: bounce 2s infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s infinite;
 }
